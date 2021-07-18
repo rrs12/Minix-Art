@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+* {
+	-webkit-user-select: text;
+	-moz-user-select: text;
+	-ms-user-select: text; 
+	user-select: text;
+   }
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 1.7;
+	color: #ececee;
+	background-color: #FCD469;
+	overflow: visible !important;
+}
+
+.ma_box-main {
+	margin-top: 200px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	margin-bottom: 50px;
+	overflow: visible;
+}
+
+.ma_title {
+	margin: 0 0 20px;
+	color: #292e34;
+	font-size: 2.5em;
+	font-weight: 700;
+	line-height: 1.21429em;
+	padding: 0 50px;
+}
+
+.ma_note {
+	margin-bottom: 42px;
+	color: rgba(41, 46, 52, .5);
+	font-size: 1.5em;
+	line-height: 1.44444em;
+	padding: 0 50px;
+}
+
+.btn{
+	height: fit-content;
+	width: fit-content;
+	padding: 10px;
+	background: linear-gradient(0deg, #292e34 , #353c44);
+	border: none;
+	font-size: 1.5em;
+	margin:15px;
+	border-radius: 75px;
+	color: white
+}
+.btn:hover {
+	height: fit-content;
+	width: fit-content;
+	padding: 10px;
+	background: rgb(0, 0, 0);
+	transition: ease-in-out,1s;
+	background: linear-gradient(0deg, #ee5495 1%, #8ecea8 60%);
+	border: none;
+	font-size: 1.5em;
+	margin:15px;
+	border-radius: 75px;
+
+}
+.owl-carousel{
+	margin-bottom: 100px;
+
+}
+.item{
+	padding: 10px;
+	text-align: center;
+	border-radius: 3px;
+	height: 400px;
+	font-family: 'Merriweather', serif;
+}
+#item1{
+	background-color: #ee5495;
+}
+.item svg{
+	fill: white;
+}
+#item2{
+	background-color: #8ecea8;
+}
+#item3{
+	background-color: #9baed9;
+}
+#item4{
+	background-color: #292e34;
+}
+::selection{
+	background-color: #292e34;
+	color: #FCD469;
+}
+.sell_input{
+	width: 70%;
+	border-radius: 75px;
+	background: transparent;
+	color:#292e34;
+	border: 2px solid white;
+	font-size: 22px;
+	margin: 10px;
+}
+#thanks{
+	display: none;
+}
+@media only screen and (max-width: 600px) {
+	.sell_input{
+		width: 80%;
+	}
+  }
