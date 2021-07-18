@@ -109,3 +109,8 @@ body {
 #thanks{
 	display: none;
 }
+@media only screen and (max-width: 600px) {
+	.sell_input{
+		width: 80%;
+	}
+  }
