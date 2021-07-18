@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+* {
+	-webkit-user-select: text;
+	-moz-user-select: text;
+	-ms-user-select: text; 
+	user-select: text;
+   }
 
 body {
 	font-family: 'Montserrat', sans-serif;
@@ -37,7 +43,7 @@ body {
 	padding: 0 50px;
 }
 
-.ma_button {
+.btn{
 	height: fit-content;
 	width: fit-content;
 	padding: 10px;
@@ -48,7 +54,7 @@ body {
 	border-radius: 75px;
 	color: white
 }
-.ma_button:hover {
+.btn:hover {
 	height: fit-content;
 	width: fit-content;
 	padding: 10px;
@@ -86,4 +92,20 @@ body {
 }
 #item4{
 	background-color: #292e34;
+}
+::selection{
+	background-color: #292e34;
+	color: #FCD469;
+}
+.sell_input{
+	width: 70%;
+	border-radius: 75px;
+	background: transparent;
+	color:#292e34;
+	border: 2px solid white;
+	font-size: 22px;
+	margin: 10px;
+}
+#thanks{
+	display: none;
 }
