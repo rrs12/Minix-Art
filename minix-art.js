@@ -36,5 +36,5 @@ $(document).on("contextmenu", function (e) {
 });
 
 $("#submit").click(function(event) {
-  alert("Please fill out the field");
+  alert("Please fill out the fields");
 });
