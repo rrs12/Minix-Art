@@ -19,7 +19,7 @@
 
 </head>
 
-<body>
+<body oncontextmenu="return false;">
 
 
   <a href="#" class="logo" target="_blank">
@@ -39,11 +39,11 @@
 
 
   <div class="ma_box-main sell animate__rotateIn animate__animated" id="sell">
-    <input type="text" placeholder="   Your Good Name" class="sell_input" id="name">
+    <input type="text" placeholder="   Your Good Name" class="sell_input" id="name" required>
     <br>
-    <input type="email" placeholder="   Enter Your Email Address" class="sell_input" id="email">
+    <input type="email" placeholder="   Enter Your Email Address" class="sell_input" id="email" required>
     <br>
-    <input type="tel" placeholder="   Enter Your Mobile No" class="sell_input" id="phone_no">
+    <input type="tel" placeholder="   Enter Your Mobile No" class="sell_input" id="phone_no" required>
     <br>
     <button class="btn" onclick="submit()">Submit</button>
   </div>

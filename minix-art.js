@@ -28,3 +28,9 @@ function submit(){
   document.getElementById("thanks").style.display="block"
   document.getElementById("sell").style.display="none"
 }
+
+
+
+$(document).on("contextmenu", function (e) {        
+  e.preventDefault();
+});

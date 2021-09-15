@@ -5,6 +5,7 @@
 	-moz-user-select: text;
 	-ms-user-select: text; 
 	user-select: text;
+	outline: none !important;
    }
 
 body {
@@ -52,19 +53,19 @@ body {
 	font-size: 1.5em;
 	margin:15px;
 	border-radius: 75px;
-	color: white
+	color: white !important;
 }
 .btn:hover {
 	height: fit-content;
 	width: fit-content;
 	padding: 10px;
-	background: rgb(0, 0, 0);
 	transition: ease-in-out,1s;
 	background: linear-gradient(0deg, #ee5495 1%, #8ecea8 60%);
 	border: none;
 	font-size: 1.5em;
 	margin:15px;
 	border-radius: 75px;
+	color: #292e34 !important;
 
 }
 .owl-carousel{
@@ -105,7 +106,9 @@ body {
 	border: 2px solid white;
 	font-size: 22px;
 	margin: 10px;
+	outline: none !important;
 }
+
 #thanks{
 	display: none;
 }
@@ -114,3 +117,8 @@ body {
 		width: 80%;
 	}
   }
+
+  ::selection{
+	background-color: #292e34;
+	color: #FCD469;
+}
