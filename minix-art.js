@@ -11,30 +11,28 @@
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
-  user_name=document.getElementById("name").value
-  user_email=document.getElementById("email").value
-  user_no=document.getElementById("phone_no").value
+  user_name = document.getElementById("name").value
+  user_email = document.getElementById("email").value
+  user_no = document.getElementById("phone_no").value
 
-function submit(){
-    user_name=document.getElementById("name").value
-    user_email=document.getElementById("email").value
-    user_no=document.getElementById("phone_no").value
+  function submit() {
+
+    user_name = document.getElementById("name").value
+    user_email = document.getElementById("email").value
+    user_no = document.getElementById("phone_no").value
 
     firebase.database().ref("Sell-art").push({
-        Phone_no: user_no,
-        email_of_user: user_email,
-        name: user_name
-  })
-  document.getElementById("thanks").style.display="block"
-  document.getElementById("sell").style.display="none"
-}
+      Phone_no: user_no,
+      email_of_user: user_email,
+      name: user_name
+    })
+    document.getElementById("thanks").style.display = "block"
+    document.getElementById("sell").style.display = "none"
+  }
 
 
 
-$(document).on("contextmenu", function (e) {        
-  e.preventDefault();
-});
 
-$("#submit").click(function(event) {
-  alert("Please fill out the fields");
-});
+  $(document).on("contextmenu", function (e) {
+    e.preventDefault();
+  });
