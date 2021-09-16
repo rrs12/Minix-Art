@@ -16,7 +16,7 @@
   user_no = document.getElementById("phone_no").value
 
   function submit() {
-
+    
     user_name = document.getElementById("name").value
     user_email = document.getElementById("email").value
     user_no = document.getElementById("phone_no").value
@@ -28,6 +28,7 @@
     })
     document.getElementById("thanks").style.display = "block"
     document.getElementById("sell").style.display = "none"
+
   }
 
 
