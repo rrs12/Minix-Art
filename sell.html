@@ -7,12 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Minix-Art</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <link rel="icon" href="./assets/MINIX-Art_icon.png">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
   <link rel="stylesheet" href="./style/footer.css">
   <link rel="stylesheet" href="./style/nav.css">
   <link rel="stylesheet" href="./style/minix-art.css">
@@ -38,21 +42,29 @@
   </nav>
 
   <div class="ma_box-main sell animate__rotateIn animate__animated" id="sell">
-    <input type="text" placeholder="   Your Good Name" class="sell_input" id="name" required>
-    <br>
-    <input type="email" placeholder="   Enter Your Email Address" class="sell_input" id="email" required>
-    <br>
-    <input type="tel" placeholder="   Enter Your Mobile No" class="sell_input" id="phone_no" required>
-    <br>
-    <button class="btn" onclick="submit()" id="submit">Submit</button>
+    <form id="sell-art">
+      <input type="text" placeholder="   Your Good Name" class="sell_input" id="name" name="name" required>
+      <br>
+      <input type="email" placeholder="   Enter Your Email Address" class="sell_input" id="email" name="email"
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+      <br>
+      <input type="tel" placeholder="   Enter Your Mobile No" class="sell_input" id="phone_no" name="no">
+      <br>
+      <button class="btn" id="submit">Submit</button>
+    </form>
   </div>
-
+  <!--
+   onclick="submit()" 
+   for #button
+-->
   <div id="thanks" class="ma_box-main">
     <h2 class="ma_title">Thank you for showing interest in selling digital art! Our team will contact you soon </h2>
     <a class="btn" href="index.html">Go to home</a>
   </div>
   <div class="animate__animated animate__bounceInLeft">
-    <h2 class="ma_title" style="font-weight: 400; opacity: 0.8;"><b style="font-weight: bold; opacity: 1 !important;">Note:-</b> Minix-Art will take 20% commision on all sold products.
+    <h2 class="ma_title" style="font-weight: 400; opacity: 0.8;"><b
+        style="font-weight: bold; opacity: 1 !important;">Note:-</b> Minix-Art will take 20% commision on all sold
+      products.
     </h2>
   </div>
 
@@ -82,9 +94,24 @@
 
 
 
-  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyDj0op-8L21-KQu9yQ1Zr8zM4IISL-FIos",
+      authDomain: "minix-art.firebaseapp.com",
+      databaseURL: "https://minix-art-default-rtdb.firebaseio.com",
+      projectId: "minix-art",
+      storageBucket: "minix-art.appspot.com",
+      messagingSenderId: "977940743944",
+      appId: "1:977940743944:web:fa8cd983f968e9aafccebd"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    db.settings({
+      timestampsInSnapshots: true
+    });
+  </script>
   <script src="minix-art.js"></script>
 
 </body>
