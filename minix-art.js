@@ -1,3 +1,4 @@
+
  const form = document.querySelector('#sell-art');
  user_name = document.getElementById("name").value
  user_email = document.getElementById("email").value
